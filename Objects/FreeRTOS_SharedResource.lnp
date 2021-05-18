@@ -1,0 +1,17 @@
+--cpu ARM7TDMI
+".\objects\startup.o"
+".\objects\gpio.o"
+".\objects\gpio_cfg.o"
+".\objects\main.o"
+".\objects\serial.o"
+".\objects\serialisr.o"
+".\objects\list.o"
+".\objects\queue.o"
+".\objects\tasks.o"
+".\objects\heap_2.o"
+".\objects\port.o"
+".\objects\portasm.o"
+--strict --scatter ".\Objects\FreeRTOS_SharedResource.sct"
+--summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list ".\Listings\FreeRTOS_SharedResource.map" -o .\Objects\FreeRTOS_SharedResource.axf
